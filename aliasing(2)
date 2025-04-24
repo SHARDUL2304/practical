@@ -1,0 +1,44 @@
+F = 7;
+t = 0:0.001:1;
+A = 2;
+%CT Square Wave
+X = A * sin (2*pi*F*t);
+subplot(5,1,1)
+plot(t,X,'black',LineWidth=1.5)
+xlabel('time')
+ylabel('Amplitude')
+title('CT Sin Wave')
+%DT Square Wave
+n = 0:0.01:1;
+Y = A * sin (2*pi*F*n);
+subplot(5,1,2)
+stem(n,Y,'black',LineWidth=1.5)
+xlabel('time')
+ylabel('Amplitude')
+title('DT Sin Wave')
+n = 0:0.1:10;
+%Reconstructed Wave for Fs << 2F
+Fs = 1;
+Z = A*sin(2*pi*(F/Fs)*n);
+subplot(5,1,3)
+plot(n,Z,LineWidth=1.5)
+xlabel('time')
+ylabel('Amplitude')
+title('Fs << 2Fm Reconstructed Wave [Aliased Waveform]')
+%Reconstructed Wave for Fs = 2F
+Fs = 14;
+Z = A*sin(2*pi*(F/Fs)*n);
+subplot(5,1,4)
+plot(n,Z,LineWidth=1.5)
+xlabel('time')
+ylabel('Amplitude')
+title('Fs = 2Fm Reconstructed Wave')
+%Reconstructed Wave for Fs >> 2F
+Fs = 30;
+n = 0:0.01:10
+Z = A*sin(2*pi*(F/Fs)*n);
+subplot(5,1,5)
+plot(n,Z,LineWidth=1.5)
+xlabel('time')
+ylabel('Amplitude')
+title('Fs >> 2Fm Accurately Reconstructed Wave')
