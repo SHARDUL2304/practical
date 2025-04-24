@@ -1,0 +1,168 @@
+MIME-Version: 1.0
+Date: Wed, 23 Apr 2025 19:58:10 +0530
+Message-ID: <CANEV+ks0BNPTJEAoVzcs=RD-mojvaY50t4O_FAe3=+4=L5a8og@mail.gmail.com>
+Subject: FFT
+From: Janhavi Wararkar <janhaviwararkar10@gmail.com>
+To: janhavi.wararkar22@pccoepune.org, omkar.wadhavankar22@pccoepune.org
+Content-Type: multipart/alternative; boundary="000000000000ff7e22063372e812"
+
+--000000000000ff7e22063372e812
+Content-Type: text/plain; charset="UTF-8"
+
+clc
+x = [1 2 3 4];
+disp('x = ')
+disp(x)
+Xk = fft(x);
+disp('Xk = ')
+disp(Xk)
+Xmag = abs(Xk);
+disp('Magnitude = ')
+disp(Xmag)
+Xang = angle(Xk);
+disp('Phase = ')
+disp(Xang)
+n = 0:0.01:1;
+subplot(4,1,1)
+stem(x,LineWidth = 1.5,color = 'black')
+xlabel('n')
+ylabel('Amplitude')
+title('Input Sequence')
+grid on
+subplot(4,1,2)
+stem(real(Xk),LineWidth = 1.5,color = 'black')
+xlabel('n')
+ylabel('Amplitude')
+title('FFT of the Input Sequence')
+grid on
+subplot(4,1,3)
+stem(Xmag,LineWidth = 1.5,color = 'black')
+xlabel('n')
+ylabel('Magnitude')
+title('Magnitude Spectrum')
+grid on
+subplot(4,1,4)
+stem(Xang,LineWidth = 1.5,color = 'black')
+xlabel('n')
+ylabel('Phase')
+title('Phase Spectrum')
+grid on
+
+--000000000000ff7e22063372e812
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail-rtcContent" style=3D"padding:30px"><di=
+v class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco=
+,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pre=
+">clc</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;fon=
+t-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span sty=
+le=3D"white-space:pre">x =3D [1 2 3 4];</span></div><div class=3D"gmail-lin=
+eNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Cour=
+ier New&quot;,monospace"><span style=3D"white-space:pre">disp(<span style=
+=3D"color:rgb(167,9,245)">&#39;x =3D &#39;</span>)</span></div><div class=
+=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consol=
+as,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pre">disp(=
+x)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-f=
+amily:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=
+=3D"white-space:pre">Xk =3D fft(x);</span></div><div class=3D"gmail-lineNod=
+e" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier =
+New&quot;,monospace"><span style=3D"white-space:pre">disp(<span style=3D"co=
+lor:rgb(167,9,245)">&#39;Xk =3D &#39;</span>)</span></div><div class=3D"gma=
+il-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quo=
+t;Courier New&quot;,monospace"><span style=3D"white-space:pre">disp(Xk)</sp=
+an></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:=
+Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"whi=
+te-space:pre">Xmag =3D abs(Xk);</span></div><div class=3D"gmail-lineNode" s=
+tyle=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&=
+quot;,monospace"><span style=3D"white-space:pre">disp(<span style=3D"color:=
+rgb(167,9,245)">&#39;Magnitude =3D &#39;</span>)</span></div><div class=3D"=
+gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&=
+quot;Courier New&quot;,monospace"><span style=3D"white-space:pre">disp(Xmag=
+)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-fa=
+mily:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=
+=3D"white-space:pre">Xang =3D angle(Xk);</span></div><div class=3D"gmail-li=
+neNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Cou=
+rier New&quot;,monospace"><span style=3D"white-space:pre">disp(<span style=
+=3D"color:rgb(167,9,245)">&#39;Phase =3D &#39;</span>)</span></div><div cla=
+ss=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Cons=
+olas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pre">dis=
+p(Xang)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;f=
+ont-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span s=
+tyle=3D"white-space:pre">n =3D 0:0.01:1;</span></div><div class=3D"gmail-li=
+neNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Cou=
+rier New&quot;,monospace"><span style=3D"white-space:pre">subplot(4,1,1)</s=
+pan></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family=
+:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"wh=
+ite-space:pre">stem(x,LineWidth =3D 1.5,color =3D <span style=3D"color:rgb(=
+167,9,245)">&#39;black&#39;</span>)</span></div><div class=3D"gmail-lineNod=
+e" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier =
+New&quot;,monospace"><span style=3D"white-space:pre">xlabel(<span style=3D"=
+color:rgb(167,9,245)">&#39;n&#39;</span>)</span></div><div class=3D"gmail-l=
+ineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Co=
+urier New&quot;,monospace"><span style=3D"white-space:pre">ylabel(<span sty=
+le=3D"color:rgb(167,9,245)">&#39;Amplitude&#39;</span>)</span></div><div cl=
+ass=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Con=
+solas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pre">ti=
+tle(<span style=3D"color:rgb(167,9,245)">&#39;Input Sequence&#39;</span>)</=
+span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-famil=
+y:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"w=
+hite-space:pre">grid <span style=3D"color:rgb(167,9,245)">on</span></span><=
+/div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menl=
+o,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-s=
+pace:pre">subplot(4,1,2)</span></div><div class=3D"gmail-lineNode" style=3D=
+"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,m=
+onospace"><span style=3D"white-space:pre">stem(real(Xk),LineWidth =3D 1.5,c=
+olor =3D <span style=3D"color:rgb(167,9,245)">&#39;black&#39;</span>)</span=
+></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Me=
+nlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white=
+-space:pre">xlabel(<span style=3D"color:rgb(167,9,245)">&#39;n&#39;</span>)=
+</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-fam=
+ily:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D=
+"white-space:pre">ylabel(<span style=3D"color:rgb(167,9,245)">&#39;Amplitud=
+e&#39;</span>)</span></div><div class=3D"gmail-lineNode" style=3D"font-size=
+:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace">=
+<span style=3D"white-space:pre">title(<span style=3D"color:rgb(167,9,245)">=
+&#39;FFT of the Input Sequence&#39;</span>)</span></div><div class=3D"gmail=
+-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;=
+Courier New&quot;,monospace"><span style=3D"white-space:pre">grid <span sty=
+le=3D"color:rgb(167,9,245)">on</span></span></div><div class=3D"gmail-lineN=
+ode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courie=
+r New&quot;,monospace"><span style=3D"white-space:pre">subplot(4,1,3)</span=
+></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Me=
+nlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white=
+-space:pre">stem(Xmag,LineWidth =3D 1.5,color =3D <span style=3D"color:rgb(=
+167,9,245)">&#39;black&#39;</span>)</span></div><div class=3D"gmail-lineNod=
+e" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier =
+New&quot;,monospace"><span style=3D"white-space:pre">xlabel(<span style=3D"=
+color:rgb(167,9,245)">&#39;n&#39;</span>)</span></div><div class=3D"gmail-l=
+ineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Co=
+urier New&quot;,monospace"><span style=3D"white-space:pre">ylabel(<span sty=
+le=3D"color:rgb(167,9,245)">&#39;Magnitude&#39;</span>)</span></div><div cl=
+ass=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Con=
+solas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pre">ti=
+tle(<span style=3D"color:rgb(167,9,245)">&#39;Magnitude Spectrum&#39;</span=
+>)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-f=
+amily:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=
+=3D"white-space:pre">grid <span style=3D"color:rgb(167,9,245)">on</span></s=
+pan></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family=
+:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"wh=
+ite-space:pre">subplot(4,1,4)</span></div><div class=3D"gmail-lineNode" sty=
+le=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&qu=
+ot;,monospace"><span style=3D"white-space:pre">stem(Xang,LineWidth =3D 1.5,=
+color =3D <span style=3D"color:rgb(167,9,245)">&#39;black&#39;</span>)</spa=
+n></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:M=
+enlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"whit=
+e-space:pre">xlabel(<span style=3D"color:rgb(167,9,245)">&#39;n&#39;</span>=
+)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-fa=
+mily:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=
+=3D"white-space:pre">ylabel(<span style=3D"color:rgb(167,9,245)">&#39;Phase=
+&#39;</span>)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:=
+10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><=
+span style=3D"white-space:pre">title(<span style=3D"color:rgb(167,9,245)">&=
+#39;Phase Spectrum&#39;</span>)</span></div><div class=3D"gmail-lineNode" s=
+tyle=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&=
+quot;,monospace"><span style=3D"white-space:pre">grid <span style=3D"color:=
+rgb(167,9,245)">on</span></span></div></div></div>
+
+--000000000000ff7e22063372e812--
