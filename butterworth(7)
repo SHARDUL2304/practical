@@ -1,0 +1,27 @@
+clc
+%Parameters for designing the filter
+As = 0.1;
+Ap = 0.6;
+Ws = 0.7*pi;
+Wp = 0.35*pi;
+T = 0.1;
+%Ripple in dB
+Rp = -20*log10(Ap);
+Rs = -20*log10(As);
+%Variables of BLT
+ohmp = (2/T)*tan(Wp/2)
+ohms = (2/T)*tan(Ws/2)
+%Order of the filter
+[N, ohmc] = buttord(ohmp, ohms, Rp, Rs, 's')
+% BLT for normalized function
+[num den] = butter(N, 1, 's');
+% BLT for unnormalized function 
+[num1 den1] = butter(N, ohmc, 's');
+[dnum dden] = bilinear(num1, den1, 1/T);
+% Plot
+w = 0:pi/16:pi;
+H = freqz(dnum, dden, w);
+plot(w/pi, abs(H))
+xlabel('W')
+ylabel('Magnitude')
+title(' LPF using BLT')
