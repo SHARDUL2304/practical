@@ -1,0 +1,116 @@
+MIME-Version: 1.0
+Date: Wed, 23 Apr 2025 20:11:05 +0530
+Message-ID: <CANEV+ksPx=u1-qGi2Pw=RxPmEct1SYo4XpqRMkZbnwj4GYumhg@mail.gmail.com>
+Subject: CIRCULAR COVOLUTION WITH ALIASING [CORRECTED]
+From: Janhavi Wararkar <janhaviwararkar10@gmail.com>
+To: janhavi.wararkar22@pccoepune.org, omkar.wadhavankar22@pccoepune.org
+Content-Type: multipart/alternative; boundary="0000000000003a1d9c063373172b"
+
+--0000000000003a1d9c063373172b
+Content-Type: text/plain; charset="UTF-8"
+
+clc
+x = [4 6 1 9]
+h = [4 5 6]
+N1 = length(x)
+N2 = length(h)
+N = max(N1, N2)
+x = [x, zeros(N-N1)];
+h = [h, zeros(N-N2)];
+for n = 0:N-1
+y(n+1) = 0;
+for i = 0:N-1
+j = mod(n-i, N);
+y(n+1) = y(n+1)+x(i+1)*h(j+1);
+end
+end
+n = 1:N;
+disp('x(n) = ')
+disp(x)
+disp('h(n) = ')
+disp(h)
+disp('Output Sequence of Circular Convolution y(n) = ')
+disp(y)
+stem(n,y)
+xlabel('Time')
+ylabel('Amplitude')
+title('Circular Convolution with aliasing')
+
+--0000000000003a1d9c063373172b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail-rtcContent" style=3D"padding:30px"><di=
+v class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco=
+,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pre=
+">clc</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;fon=
+t-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span sty=
+le=3D"white-space:pre">x =3D [4 6 1 9]</span></div><div class=3D"gmail-line=
+Node" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Couri=
+er New&quot;,monospace"><span style=3D"white-space:pre">h =3D [4 5 6]</span=
+></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Me=
+nlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white=
+-space:pre">N1 =3D length(x)</span></div><div class=3D"gmail-lineNode" styl=
+e=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quo=
+t;,monospace"><span style=3D"white-space:pre">N2 =3D length(h)</span></div>=
+<div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Mon=
+aco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:=
+pre">N =3D max(N1, N2)</span></div><div class=3D"gmail-lineNode" style=3D"f=
+ont-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,mon=
+ospace"><span style=3D"white-space:pre">x =3D [x, zeros(N-N1)];</span></div=
+><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Mo=
+naco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-space=
+:pre">h =3D [h, zeros(N-N2)];</span></div><div class=3D"gmail-lineNode" sty=
+le=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&qu=
+ot;,monospace"><span style=3D"white-space:pre"><span style=3D"color:rgb(14,=
+0,255)">for </span>n =3D 0:N-1</span></div><div class=3D"gmail-lineNode" st=
+yle=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&q=
+uot;,monospace"><span style=3D"white-space:pre">    y(n+1) =3D 0;</span></d=
+iv><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,=
+Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-spa=
+ce:pre">    <span style=3D"color:rgb(14,0,255)">for </span>i =3D 0:N-1</spa=
+n></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:M=
+enlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"whit=
+e-space:pre">        j =3D mod(n-i, N);</span></div><div class=3D"gmail-lin=
+eNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Cour=
+ier New&quot;,monospace"><span style=3D"white-space:pre">        y(n+1) =3D=
+ y(n+1)+x(i+1)*h(j+1);</span></div><div class=3D"gmail-lineNode" style=3D"f=
+ont-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,mon=
+ospace"><span style=3D"white-space:pre">    <span style=3D"color:rgb(14,0,2=
+55)">end</span></span></div><div class=3D"gmail-lineNode" style=3D"font-siz=
+e:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"=
+><span style=3D"white-space:pre"><span style=3D"color:rgb(14,0,255)">end</s=
+pan></span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font=
+-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span styl=
+e=3D"white-space:pre">n =3D 1:N;</span></div><div class=3D"gmail-lineNode" =
+style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New=
+&quot;,monospace"><span style=3D"white-space:pre">disp(<span style=3D"color=
+:rgb(167,9,245)">&#39;x(n) =3D &#39;</span>)</span></div><div class=3D"gmai=
+l-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot=
+;Courier New&quot;,monospace"><span style=3D"white-space:pre">disp(x)</span=
+></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Me=
+nlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white=
+-space:pre">disp(<span style=3D"color:rgb(167,9,245)">&#39;h(n) =3D &#39;</=
+span>)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;fo=
+nt-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span st=
+yle=3D"white-space:pre">disp(h)</span></div><div class=3D"gmail-lineNode" s=
+tyle=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier New&=
+quot;,monospace"><span style=3D"white-space:pre">disp(<span style=3D"color:=
+rgb(167,9,245)">&#39;Output Sequence of Circular Convolution y(n) =3D &#39;=
+</span>)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;=
+font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span =
+style=3D"white-space:pre">disp(y)</span></div><div class=3D"gmail-lineNode"=
+ style=3D"font-size:10pt;font-family:Menlo,Monaco,Consolas,&quot;Courier Ne=
+w&quot;,monospace"><span style=3D"white-space:pre">stem(n,y)</span></div><d=
+iv class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Menlo,Monac=
+o,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white-space:pr=
+e">xlabel(<span style=3D"color:rgb(167,9,245)">&#39;Time&#39;</span>)</span=
+></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;font-family:Me=
+nlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span style=3D"white=
+-space:pre">ylabel(<span style=3D"color:rgb(167,9,245)">&#39;Amplitude&#39;=
+</span>)</span></div><div class=3D"gmail-lineNode" style=3D"font-size:10pt;=
+font-family:Menlo,Monaco,Consolas,&quot;Courier New&quot;,monospace"><span =
+style=3D"white-space:pre">title(<span style=3D"color:rgb(167,9,245)">&#39;C=
+ircular Convolution with aliasing&#39;</span>)</span></div></div></div>
+
+--0000000000003a1d9c063373172b--
