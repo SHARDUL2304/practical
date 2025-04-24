@@ -1,0 +1,98 @@
+clc
+F = 5;
+t = 0 : 0.01 : 1;
+n = 0 : 0.0001 : 1;
+A = 5;
+%Sine Wave
+M = A*sin(2*pi*F*t);
+subplot(6,2,1)
+plot(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Continuous Sine Wave')
+grid on
+subplot(6,2,2)
+stem(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Discrete Sine Wave')
+grid on
+%Cosine Wave
+M = A*cos(2*pi*F*t);
+subplot(6,2,3)
+plot(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Continuous Cosine Wave')
+grid on
+subplot(6,2,4)
+stem(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Discrete Cosine Wave')
+grid on
+%Square Wave
+M = A*square(2*pi*F*t);
+subplot(6,2,5)
+plot(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Continuous Square Wave')
+grid on
+subplot(6,2,6)
+stem(t,M,'filled',LineWidth=1,Color='black')
+xlabel('Time')
+ylabel('Amplitude')
+title('Discrete Square Wave')
+grid on
+%Sawtooth Wave
+M = A*sawtooth(2*pi*F*t);
+subplot(6,2,7)
+plot(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Continuous Sawtooth Wave')
+grid on
+subplot(6,2,8)
+stem(t,M,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Discrete Sawtooth Wave')
+grid on
+%Ramp Wave
+subplot(6,2,9)
+plot(t,t,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Continuous Ramp Wave')
+grid on
+subplot(6,2,10)
+stem(n,n,LineWidth=1.5,Color='red')
+xlabel('Time')
+ylabel('Amplitude')
+title('Discrete Ramp Wave')
+grid on
+t1 = -1:0.01:0;
+t2 = 0:0.01:1;
+t = [t1 t2];
+u1 = zeros(size(t1));
+u2 = ones(size(t2));
+u = [u1 u2];
+subplot(6,2,11)
+plot(t,u)
+xlabel('Time')
+ylabel('Amplitude')
+title('Continuous Unit Wave')
+grid on
+n1 = -1:0.01:0;
+n2 = 0:0.01:1;
+n = [n1 n2]
+u1 = zeros(size(n1));
+u2 = ones(size(n2));
+u = [u1 u2];
+subplot(6,2,12)
+stem(n,u)
+xlabel('Time')
+ylabel('Amplitude')
+title('Discrete Unit Wave')
+grid on
